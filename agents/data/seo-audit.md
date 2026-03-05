@@ -38,6 +38,12 @@ Slug: chinese-money-plant-dropping-leaves-here-s-how-to-fix-it
 - [WARNING] Excerpt too long for meta description (165 chars, aim for <160)
 - [INFO] No images — consider adding visual content
 
+## Dracaena Marginata Yellow Leaves: Causes & Easy Fixes
+Slug: dracaena-marginata-yellow-leaves-causes-easy-fixes
+- [WARNING] Excerpt too long for meta description (200 chars, aim for <160)
+- [ERROR] Primary keyword "dracaena marginata yellow leaves" not found in content
+- [INFO] No images — consider adding visual content
+
 ## How Much Light Does a ZZ Plant Need to Thrive?
 Slug: how-much-light-does-a-zz-plant-need-to-thrive
 - [WARNING] Excerpt too long for meta description (184 chars, aim for <160)
@@ -70,6 +76,11 @@ Slug: how-to-propagate-pothos-in-water-a-beginner-s-guide
 - [WARNING] Excerpt too long for meta description (173 chars, aim for <160)
 - [INFO] No images — consider adding visual content
 
+## How to Repot a Succulent: A Simple Step-by-Step Guide
+Slug: how-to-repot-a-succulent-a-simple-step-by-step-guide
+- [WARNING] Excerpt too long for meta description (180 chars, aim for <160)
+- [INFO] No images — consider adding visual content
+
 ## How to Save an Overwatered Plant (Before It's Too Late)
 Slug: how-to-save-an-overwatered-plant-before-it-s-too-late
 - [WARNING] Excerpt too long for meta description (215 chars, aim for <160)
@@ -94,6 +105,11 @@ Slug: philodendron-vs-pothos-difference-how-to-tell-them-apart
 - [WARNING] Excerpt too long for meta description (219 chars, aim for <160)
 - [INFO] No images — consider adding visual content
 
+## Prayer Plant Care and Watering: The Complete Guide
+Slug: prayer-plant-care-and-watering-the-complete-guide
+- [WARNING] Excerpt too long for meta description (173 chars, aim for <160)
+- [INFO] No images — consider adding visual content
+
 ## Rubber Plant Care Guide: Grow a Thriving Ficus Elastica
 Slug: rubber-plant-care-guide-grow-a-thriving-ficus-elastica
 - [WARNING] Excerpt too long for meta description (197 chars, aim for <160)
@@ -106,6 +122,10 @@ Slug: spider-plant-brown-tips-causes-fixes-prevention
 ## String of Pearls Dying? Here's How to Save It
 Slug: string-of-pearls-dying-here-s-how-to-save-it
 - [WARNING] Excerpt too long for meta description (178 chars, aim for <160)
+- [INFO] No images — consider adding visual content
+
+## Why Is My Aloe Vera Turning Brown? 8 Causes & Fixes
+Slug: why-is-my-aloe-vera-turning-brown-8-causes-fixes
 - [INFO] No images — consider adding visual content
 
 ## Why Is My Monstera Turning Yellow? 8 Causes & Fixes
