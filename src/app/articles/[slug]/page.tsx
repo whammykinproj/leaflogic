@@ -1,6 +1,7 @@
 import { getArticleBySlug, getAllSlugs } from "@/lib/articles";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import AdSlot from "@/components/AdSlot";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -35,10 +36,12 @@ export default async function ArticlePage({ params }: PageProps) {
         {article.title}
       </h1>
       <p className="mt-2 text-sm text-gray-400">{article.date}</p>
+      <AdSlot slot="top-article" format="horizontal" />
       <div
         className="prose mt-8"
         dangerouslySetInnerHTML={{ __html: article.content }}
       />
+      <AdSlot slot="bottom-article" format="rectangle" />
     </article>
   );
 }

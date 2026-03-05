@@ -74,8 +74,10 @@ Respond in this exact JSON format (no markdown code blocks, just raw JSON):
       messages: [{ role: "user", content: prompt }],
     });
 
-    const text =
+    let text =
       response.content[0].type === "text" ? response.content[0].text : "";
+    // Strip markdown code blocks if present
+    text = text.replace(/^```(?:json)?\s*\n?/i, "").replace(/\n?```\s*$/i, "");
     const parsed = JSON.parse(text);
     const slug = slugify(parsed.title);
 

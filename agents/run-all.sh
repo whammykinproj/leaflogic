@@ -1,9 +1,10 @@
 #!/bin/bash
-# LeafLogic Agent Pipeline
-# Run all agents in sequence to generate and publish content.
+# LeafLogic Agent Pipeline — Full Money Machine
+# Runs ALL agents in sequence: research → write → optimize → index → promote
 #
 # Usage: ./agents/run-all.sh
-# Set ANTHROPIC_API_KEY env var before running.
+# Required env vars: ANTHROPIC_API_KEY
+# Optional env vars: AMAZON_AFFILIATE_TAG, BATCH_SIZE
 
 set -e
 
@@ -29,12 +30,33 @@ echo "--- Step 3: Internal Linker ---"
 npx tsx agents/03-internal-linker.ts
 echo ""
 
-# Step 4: Sitemap
-echo "--- Step 4: Sitemap Generator ---"
+# Step 4: Affiliate Links
+echo "--- Step 4: Affiliate Injector ---"
+npx tsx agents/05-affiliate-injector.ts
+echo ""
+
+# Step 5: SEO Audit
+echo "--- Step 5: SEO Auditor ---"
+npx tsx agents/08-seo-auditor.ts
+echo ""
+
+# Step 6: Sitemap
+echo "--- Step 6: Sitemap Generator ---"
 npx tsx agents/04-sitemap-generator.ts
+echo ""
+
+# Step 7: Ping Search Engines
+echo "--- Step 7: Google Indexer ---"
+npx tsx agents/06-google-indexer.ts
+echo ""
+
+# Step 8: Social Media Posts
+echo "--- Step 8: Social Post Generator ---"
+npx tsx agents/07-social-poster.ts
 echo ""
 
 echo "========================================="
 echo "  Pipeline complete!"
-echo "  Run 'npm run build' to rebuild the site."
+echo "  New articles, affiliate links, social"
+echo "  posts, and search engine pings done."
 echo "========================================="
