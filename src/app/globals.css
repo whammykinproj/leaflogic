@@ -1,11 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
-  --green-primary: #2d6a4f;
-  --green-light: #52b788;
-  --green-bg: #f0fdf4;
+  --background: #fafdf7;
+  --foreground: #1a2e1a;
+  --green-primary: #1b5e3b;
+  --green-light: #34d399;
+  --green-bg: #ecfdf3;
+  --green-dark: #0f3d25;
+  --green-muted: #a7d7be;
+  --cream: #f8faf5;
+  --border: #e2edd8;
 }
 
 @theme inline {
@@ -14,6 +18,10 @@
   --color-green-primary: var(--green-primary);
   --color-green-light: var(--green-light);
   --color-green-bg: var(--green-bg);
+  --color-green-dark: var(--green-dark);
+  --color-green-muted: var(--green-muted);
+  --color-cream: var(--cream);
+  --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
 }
 
@@ -22,34 +30,51 @@ body {
   color: var(--foreground);
 }
 
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: var(--green-muted);
+  color: var(--green-dark);
+}
+
+/* Prose article styles */
 .prose h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   margin-bottom: 1rem;
   color: var(--green-primary);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--green-bg);
 }
 
 .prose h3 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
   margin-bottom: 0.75rem;
+  color: var(--green-dark);
 }
 
 .prose p {
-  margin-bottom: 1rem;
-  line-height: 1.75;
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  color: #374a37;
 }
 
 .prose ul, .prose ol {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   padding-left: 1.5rem;
 }
 
 .prose li {
   margin-bottom: 0.5rem;
-  line-height: 1.75;
+  line-height: 1.8;
+  color: #374a37;
 }
 
 .prose ul li {
@@ -58,4 +83,60 @@ body {
 
 .prose ol li {
   list-style-type: decimal;
+}
+
+.prose a {
+  color: var(--green-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.15s;
+}
+
+.prose a:hover {
+  color: var(--green-light);
+}
+
+.prose strong {
+  color: var(--green-dark);
+  font-weight: 600;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.prose table th {
+  background: var(--green-bg);
+  color: var(--green-primary);
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 2px solid var(--border);
+}
+
+.prose table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.prose table tr:hover td {
+  background: var(--cream);
+}
+
+/* Related links section */
+.prose .related-links {
+  list-style: none;
+  padding: 0;
+}
+
+.prose .related-links li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.prose .related-links li:last-child {
+  border-bottom: none;
 }

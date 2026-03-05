@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import AdSlot from "@/components/AdSlot";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import Link from "next/link";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -84,21 +85,52 @@ export default async function ArticlePage({ params }: PageProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
         />
       )}
-      <article className="mx-auto max-w-3xl px-6 py-16">
-        <span className="text-xs font-semibold uppercase tracking-wide text-green-light">
-          {article.category}
-        </span>
-        <h1 className="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">
-          {article.title}
-        </h1>
-        <p className="mt-2 text-sm text-gray-400">{article.date}</p>
+
+      {/* Breadcrumb */}
+      <div className="border-b border-border bg-cream">
+        <div className="mx-auto max-w-3xl px-6 py-3">
+          <nav className="flex items-center gap-2 text-xs text-foreground/40">
+            <Link href="/" className="hover:text-green-primary transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/articles" className="hover:text-green-primary transition-colors">Guides</Link>
+            <span>/</span>
+            <span className="text-foreground/60 truncate">{article.title}</span>
+          </nav>
+        </div>
+      </div>
+
+      <article className="mx-auto max-w-3xl px-6 py-12">
+        {/* Header */}
+        <div className="mb-10">
+          <span className="inline-block rounded-full bg-green-bg px-3 py-1 text-xs font-semibold text-green-primary">
+            {article.category}
+          </span>
+          <h1 className="mt-4 text-3xl font-bold leading-tight text-foreground sm:text-4xl">
+            {article.title}
+          </h1>
+          <p className="mt-3 text-base leading-relaxed text-foreground/50">
+            {article.excerpt}
+          </p>
+          <div className="mt-4 flex items-center gap-3 text-xs text-foreground/35">
+            <span>Published {article.date}</span>
+            <span className="h-1 w-1 rounded-full bg-foreground/20" />
+            <span>LeafLogic Team</span>
+          </div>
+          <div className="mt-6 h-px bg-gradient-to-r from-green-light/40 via-border to-transparent" />
+        </div>
+
         <AdSlot slot="top-article" format="horizontal" />
+
+        {/* Article content */}
         <div
-          className="prose mt-8"
+          className="prose"
           dangerouslySetInnerHTML={{ __html: article.content }}
         />
+
         <AdSlot slot="bottom-article" format="rectangle" />
-        <div className="mt-12">
+
+        {/* Newsletter CTA */}
+        <div className="mt-14">
           <NewsletterSignup />
         </div>
       </article>
