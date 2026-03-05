@@ -11,12 +11,8 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-green-dark via-green-primary to-green-dark px-6 py-24 sm:py-32">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-green-light blur-3xl" />
-          <div className="absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-green-muted blur-3xl" />
-        </div>
-        <div className="relative mx-auto max-w-3xl text-center">
+      <section className="bg-green-dark px-6 py-24 sm:py-32">
+        <div className="mx-auto max-w-3xl text-center">
           <span className="inline-block rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-green-light">
             {articles.length}+ Expert Guides
           </span>

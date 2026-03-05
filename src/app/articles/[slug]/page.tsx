@@ -116,7 +116,7 @@ export default async function ArticlePage({ params }: PageProps) {
             <span className="h-1 w-1 rounded-full bg-foreground/20" />
             <span>LeafLogic Team</span>
           </div>
-          <div className="mt-6 h-px bg-gradient-to-r from-green-light/40 via-border to-transparent" />
+          <div className="mt-6 h-px bg-border" />
         </div>
 
         <AdSlot slot="top-article" format="horizontal" />

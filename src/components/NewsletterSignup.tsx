@@ -14,7 +14,7 @@ export default function NewsletterSignup() {
 
   if (submitted) {
     return (
-      <div className="rounded-2xl border border-green-light/30 bg-gradient-to-br from-green-bg to-cream p-8 text-center">
+      <div className="rounded-2xl border border-green-light/30 bg-green-bg p-8 text-center">
         <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-light/20 text-2xl">
           &#10003;
         </div>
@@ -29,7 +29,7 @@ export default function NewsletterSignup() {
   }
 
   return (
-    <div className="rounded-2xl border border-border bg-gradient-to-br from-green-bg to-cream p-8 sm:p-10">
+    <div className="rounded-2xl border border-border bg-green-bg p-8 sm:p-10">
       <div className="text-center sm:text-left">
         <h3 className="text-xl font-bold text-green-dark">
           Get Weekly Plant Tips
