@@ -59,7 +59,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://leaflogic.vercel.app/articles/croton-plant-losing-leaves-here-s-how-to-fix-it</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://leaflogic.vercel.app/articles/dracaena-marginata-yellow-leaves-causes-easy-fixes</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leaflogic.vercel.app/articles/english-ivy-indoor-care-tips-for-a-thriving-plant</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -89,6 +101,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://leaflogic.vercel.app/articles/how-to-grow-pothos-in-water-with-roots-successfully</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://leaflogic.vercel.app/articles/how-to-make-pothos-grow-faster-8-proven-tips</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -101,6 +119,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://leaflogic.vercel.app/articles/how-to-propagate-pothos-in-water-reddit-s-best-tips</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leaflogic.vercel.app/articles/how-to-propagate-pothos-in-water-step-by-step-guide</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leaflogic.vercel.app/articles/how-to-propagate-pothos-in-water-with-pictures-guide</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://leaflogic.vercel.app/articles/how-to-repot-a-succulent-a-simple-step-by-step-guide</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -108,6 +144,12 @@
   </url>
   <url>
     <loc>https://leaflogic.vercel.app/articles/how-to-save-an-overwatered-plant-before-it-s-too-late</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leaflogic.vercel.app/articles/hoya-plant-not-flowering-here-s-how-to-fix-it</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -161,6 +203,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://leaflogic.vercel.app/articles/why-is-monstera-yellowing-causes-and-easy-fixes</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://leaflogic.vercel.app/articles/why-is-my-aloe-vera-turning-brown-8-causes-fixes</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -168,6 +216,60 @@
   </url>
   <url>
     <loc>https://leaflogic.vercel.app/articles/why-is-my-monstera-turning-yellow-8-causes-fixes</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leaflogic.vercel.app/articles/why-is-my-monstera-turning-yellow-8-common-causes</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leaflogic.vercel.app/articles/why-is-my-monstera-turning-yellow-after-repotting</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leaflogic.vercel.app/articles/why-is-my-monstera-turning-yellow-and-black</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leaflogic.vercel.app/articles/why-is-my-monstera-turning-yellow-and-brown</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leaflogic.vercel.app/articles/why-is-my-monstera-turning-yellow-but-growing-new-leaves</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leaflogic.vercel.app/articles/why-is-my-monstera-turning-yellow-in-water-fix-it-fast</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leaflogic.vercel.app/articles/why-is-my-monstera-turning-yellow-in-winter-fix-it-fast</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leaflogic.vercel.app/articles/why-is-my-monstera-turning-yellow-on-the-edges</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leaflogic.vercel.app/articles/why-is-my-monstera-turning-yellow-with-brown-spots</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

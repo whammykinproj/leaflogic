@@ -38,10 +38,19 @@ Slug: chinese-money-plant-dropping-leaves-here-s-how-to-fix-it
 - [WARNING] Excerpt too long for meta description (165 chars, aim for <160)
 - [INFO] No images — consider adding visual content
 
+## Croton Plant Losing Leaves? Here's How to Fix It
+Slug: croton-plant-losing-leaves-here-s-how-to-fix-it
+- [INFO] No images — consider adding visual content
+
 ## Dracaena Marginata Yellow Leaves: Causes & Easy Fixes
 Slug: dracaena-marginata-yellow-leaves-causes-easy-fixes
 - [WARNING] Excerpt too long for meta description (200 chars, aim for <160)
 - [ERROR] Primary keyword "dracaena marginata yellow leaves" not found in content
+- [INFO] No images — consider adding visual content
+
+## English Ivy Indoor Care Tips for a Thriving Plant
+Slug: english-ivy-indoor-care-tips-for-a-thriving-plant
+- [WARNING] Excerpt too long for meta description (182 chars, aim for <160)
 - [INFO] No images — consider adding visual content
 
 ## How Much Light Does a ZZ Plant Need to Thrive?
@@ -67,6 +76,10 @@ Slug: how-to-get-rid-of-fungus-gnats-for-good
 - [WARNING] No internal links — run the internal linker agent
 - [INFO] No images — consider adding visual content
 
+## How to Grow Pothos in Water with Roots Successfully
+Slug: how-to-grow-pothos-in-water-with-roots-successfully
+- [INFO] No images — consider adding visual content
+
 ## How to Make Pothos Grow Faster: 8 Proven Tips
 Slug: how-to-make-pothos-grow-faster-8-proven-tips
 - [INFO] No images — consider adding visual content
@@ -74,6 +87,21 @@ Slug: how-to-make-pothos-grow-faster-8-proven-tips
 ## How to Propagate Pothos in Water: A Beginner's Guide
 Slug: how-to-propagate-pothos-in-water-a-beginner-s-guide
 - [WARNING] Excerpt too long for meta description (173 chars, aim for <160)
+- [INFO] No images — consider adding visual content
+
+## How to Propagate Pothos in Water: Reddit's Best Tips
+Slug: how-to-propagate-pothos-in-water-reddit-s-best-tips
+- [WARNING] Excerpt too long for meta description (194 chars, aim for <160)
+- [INFO] No images — consider adding visual content
+
+## How to Propagate Pothos in Water: Step-by-Step Guide
+Slug: how-to-propagate-pothos-in-water-step-by-step-guide
+- [WARNING] Excerpt too long for meta description (163 chars, aim for <160)
+- [INFO] No images — consider adding visual content
+
+## How to Propagate Pothos in Water with Pictures Guide
+Slug: how-to-propagate-pothos-in-water-with-pictures-guide
+- [WARNING] Excerpt too long for meta description (167 chars, aim for <160)
 - [INFO] No images — consider adding visual content
 
 ## How to Repot a Succulent: A Simple Step-by-Step Guide
@@ -84,6 +112,11 @@ Slug: how-to-repot-a-succulent-a-simple-step-by-step-guide
 ## How to Save an Overwatered Plant (Before It's Too Late)
 Slug: how-to-save-an-overwatered-plant-before-it-s-too-late
 - [WARNING] Excerpt too long for meta description (215 chars, aim for <160)
+- [INFO] No images — consider adding visual content
+
+## Hoya Plant Not Flowering? Here's How to Fix It
+Slug: hoya-plant-not-flowering-here-s-how-to-fix-it
+- [WARNING] Excerpt too long for meta description (181 chars, aim for <160)
 - [INFO] No images — consider adding visual content
 
 ## Jade Plant Leaves Falling Off? Here's How to Fix It
@@ -124,6 +157,11 @@ Slug: string-of-pearls-dying-here-s-how-to-save-it
 - [WARNING] Excerpt too long for meta description (178 chars, aim for <160)
 - [INFO] No images — consider adding visual content
 
+## Why Is Monstera Yellowing? Causes and Easy Fixes
+Slug: why-is-monstera-yellowing-causes-and-easy-fixes
+- [ERROR] Primary keyword "why is monstera yellowing" not found in content
+- [INFO] No images — consider adding visual content
+
 ## Why Is My Aloe Vera Turning Brown? 8 Causes & Fixes
 Slug: why-is-my-aloe-vera-turning-brown-8-causes-fixes
 - [INFO] No images — consider adding visual content
@@ -131,6 +169,48 @@ Slug: why-is-my-aloe-vera-turning-brown-8-causes-fixes
 ## Why Is My Monstera Turning Yellow? 8 Causes & Fixes
 Slug: why-is-my-monstera-turning-yellow-8-causes-fixes
 - [WARNING] Excerpt too long for meta description (189 chars, aim for <160)
+- [INFO] No images — consider adding visual content
+
+## Why Is My Monstera Turning Yellow? 8 Common Causes
+Slug: why-is-my-monstera-turning-yellow-8-common-causes
+- [WARNING] Excerpt too long for meta description (201 chars, aim for <160)
+- [INFO] No images — consider adding visual content
+
+## Why Is My Monstera Turning Yellow After Repotting?
+Slug: why-is-my-monstera-turning-yellow-after-repotting
+- [WARNING] Excerpt too long for meta description (194 chars, aim for <160)
+- [INFO] No images — consider adding visual content
+
+## Why Is My Monstera Turning Yellow and Black?
+Slug: why-is-my-monstera-turning-yellow-and-black
+- [INFO] No images — consider adding visual content
+
+## Why Is My Monstera Turning Yellow and Brown?
+Slug: why-is-my-monstera-turning-yellow-and-brown
+- [INFO] No images — consider adding visual content
+
+## Why Is My Monstera Turning Yellow But Growing New Leaves?
+Slug: why-is-my-monstera-turning-yellow-but-growing-new-leaves
+- [WARNING] Excerpt too long for meta description (176 chars, aim for <160)
+- [INFO] No images — consider adding visual content
+
+## Why Is My Monstera Turning Yellow in Water? Fix It Fast
+Slug: why-is-my-monstera-turning-yellow-in-water-fix-it-fast
+- [WARNING] Excerpt too long for meta description (162 chars, aim for <160)
+- [INFO] No images — consider adding visual content
+
+## Why Is My Monstera Turning Yellow in Winter? Fix It Fast
+Slug: why-is-my-monstera-turning-yellow-in-winter-fix-it-fast
+- [WARNING] Excerpt too long for meta description (194 chars, aim for <160)
+- [INFO] No images — consider adding visual content
+
+## Why Is My Monstera Turning Yellow on the Edges?
+Slug: why-is-my-monstera-turning-yellow-on-the-edges
+- [INFO] No images — consider adding visual content
+
+## Why Is My Monstera Turning Yellow with Brown Spots?
+Slug: why-is-my-monstera-turning-yellow-with-brown-spots
+- [WARNING] Excerpt too long for meta description (188 chars, aim for <160)
 - [INFO] No images — consider adding visual content
 
 ## Why Is My Pothos Turning Yellow? 7 Common Causes and Fixes
