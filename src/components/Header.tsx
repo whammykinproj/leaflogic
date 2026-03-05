@@ -14,6 +14,9 @@ export default function Header() {
           <Link href="/articles" className="hover:text-green-primary transition-colors">
             Plant Guides
           </Link>
+          <Link href="/about" className="hover:text-green-primary transition-colors">
+            About
+          </Link>
         </nav>
       </div>
     </header>

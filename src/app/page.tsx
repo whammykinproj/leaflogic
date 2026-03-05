@@ -1,5 +1,6 @@
 import { getAllArticles } from "@/lib/articles";
 import ArticleCard from "@/components/ArticleCard";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import Link from "next/link";
 
 export default function Home() {
@@ -50,6 +51,11 @@ export default function Home() {
             </Link>
           </div>
         )}
+      </section>
+
+      {/* Newsletter */}
+      <section className="mx-auto max-w-2xl px-6 pb-16">
+        <NewsletterSignup />
       </section>
     </div>
   );
