@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import AdSlot from "@/components/AdSlot";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import ScrollToTop from "@/components/ScrollToTop";
 import Link from "next/link";
 
 interface PageProps {
@@ -73,6 +74,18 @@ export default async function ArticlePage({ params }: PageProps) {
       }
     : null;
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://leaflogic.app/" },
+      { "@type": "ListItem", position: 2, name: "Guides", item: "https://leaflogic.app/articles" },
+      { "@type": "ListItem", position: 3, name: article.title, item: `https://leaflogic.app/articles/${article.slug}` },
+    ],
+  };
+
+  const readingTime = Math.max(1, Math.round(article.wordCount / 200));
+
   return (
     <>
       <script
@@ -85,6 +98,10 @@ export default async function ArticlePage({ params }: PageProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
         />
       )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
 
       {/* Breadcrumb */}
       <div className="border-b border-border bg-cream">
@@ -114,6 +131,8 @@ export default async function ArticlePage({ params }: PageProps) {
           <div className="mt-4 flex items-center gap-3 text-xs text-foreground/35">
             <span>Published {article.date}</span>
             <span className="h-1 w-1 rounded-full bg-foreground/20" />
+            <span>{readingTime} min read</span>
+            <span className="h-1 w-1 rounded-full bg-foreground/20" />
             <span>LeafLogic Team</span>
           </div>
           <div className="mt-6 h-px bg-border" />
@@ -134,6 +153,8 @@ export default async function ArticlePage({ params }: PageProps) {
           <NewsletterSignup />
         </div>
       </article>
+
+      <ScrollToTop />
     </>
   );
 }

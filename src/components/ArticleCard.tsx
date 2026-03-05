@@ -6,6 +6,7 @@ interface ArticleCardProps {
   excerpt: string;
   date: string;
   category: string;
+  wordCount?: number;
 }
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -22,8 +23,10 @@ export default function ArticleCard({
   excerpt,
   date,
   category,
+  wordCount,
 }: ArticleCardProps) {
   const categoryClass = CATEGORY_COLORS[category] || "bg-green-bg text-green-primary";
+  const readingTime = wordCount ? Math.max(1, Math.round(wordCount / 200)) : null;
 
   return (
     <Link
@@ -42,7 +45,15 @@ export default function ArticleCard({
         {excerpt}
       </p>
       <div className="mt-4 flex items-center justify-between">
-        <p className="text-xs text-foreground/35">{date}</p>
+        <div className="flex items-center gap-2 text-xs text-foreground/35">
+          <span>{date}</span>
+          {readingTime && (
+            <>
+              <span className="h-1 w-1 rounded-full bg-foreground/20" />
+              <span>{readingTime} min read</span>
+            </>
+          )}
+        </div>
         <span className="text-xs font-medium text-green-primary opacity-0 transition-opacity group-hover:opacity-100">
           Read &rarr;
         </span>

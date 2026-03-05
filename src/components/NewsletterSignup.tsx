@@ -31,11 +31,17 @@ export default function NewsletterSignup() {
   return (
     <div className="rounded-2xl border border-border bg-green-bg p-8 sm:p-10">
       <div className="text-center sm:text-left">
-        <h3 className="text-xl font-bold text-green-dark">
-          Get Weekly Plant Tips
-        </h3>
+        <div className="flex items-center justify-center gap-2 sm:justify-start">
+          <svg className="h-6 w-6 text-green-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 21c-4-4-8-7.5-8-11a8 8 0 0116 0c0 3.5-4 7-8 11z" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 21V10" />
+          </svg>
+          <h3 className="text-xl font-bold text-green-dark">
+            Get Weekly Plant Tips
+          </h3>
+        </div>
         <p className="mt-2 text-sm text-foreground/50">
-          Join plant parents who get one actionable tip every week. No spam, unsubscribe anytime.
+          Join 2,500+ plant lovers who get one actionable tip every week. No spam, unsubscribe anytime.
         </p>
       </div>
       <form

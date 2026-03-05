@@ -11,8 +11,23 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-green-dark px-6 py-24 sm:py-32">
-        <div className="mx-auto max-w-3xl text-center">
+      <section className="relative overflow-hidden bg-green-dark px-6 py-24 sm:py-32">
+        {/* Botanical SVG pattern overlay */}
+        <div className="pointer-events-none absolute inset-0 opacity-[0.06]">
+          <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="leaf-pattern" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+                <path d="M40 10c-8 0-20 12-20 30s12 30 20 30 20-12 20-30-12-30-20-30z" fill="none" stroke="currentColor" strokeWidth="1"/>
+                <path d="M40 10v60" fill="none" stroke="currentColor" strokeWidth="0.5"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#leaf-pattern)" className="text-green-light"/>
+          </svg>
+        </div>
+        {/* Gradient overlay for depth */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-dark/50 via-transparent to-green-dark/80" />
+
+        <div className="relative mx-auto max-w-3xl text-center">
           <span className="inline-block rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-green-light">
             {articles.length}+ Expert Guides
           </span>
@@ -25,7 +40,19 @@ export default function Home() {
             Simple, actionable care guides for every indoor plant. Diagnose
             problems, learn proper care, and watch your collection flourish.
           </p>
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+
+          {/* Search-style prompt */}
+          <Link
+            href="/articles"
+            className="mx-auto mt-8 flex max-w-md items-center gap-3 rounded-full border border-white/15 bg-white/5 px-5 py-3.5 text-sm text-white/40 backdrop-blur-sm transition-all hover:border-white/25 hover:bg-white/10"
+          >
+            <svg className="h-4 w-4 shrink-0 text-green-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            What plant needs help?
+          </Link>
+
+          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
               href="/articles"
               className="inline-flex items-center gap-2 rounded-full bg-green-light px-6 py-3 text-sm font-semibold text-green-dark transition-all hover:bg-white hover:shadow-lg"
@@ -42,6 +69,11 @@ export default function Home() {
               Plants A-Z
             </Link>
           </div>
+
+          {/* Social proof */}
+          <p className="mt-8 text-xs font-medium tracking-wide text-white/30">
+            Trusted by 10,000+ plant parents
+          </p>
         </div>
       </section>
 
