@@ -12,7 +12,7 @@ import fs from "fs";
 import path from "path";
 import { CONFIG } from "./config";
 
-const SITE_URL = "https://leaflogic-two.vercel.app";
+const SITE_URL = "https://leaflogic.app";
 const SITEMAP_URL = `${SITE_URL}/sitemap.xml`;
 
 async function pingSitemap() {

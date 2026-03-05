@@ -15,7 +15,7 @@ import fs from "fs";
 import path from "path";
 import { CONFIG } from "./config";
 
-const SITE_URL = "https://leaflogic-two.vercel.app";
+const SITE_URL = "https://leaflogic.app";
 const SOCIAL_DIR = path.join(process.cwd(), "agents/social");
 
 interface Article {

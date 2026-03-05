@@ -14,7 +14,7 @@ interface Article {
   date: string;
 }
 
-const SITE_URL = "https://leaflogic.vercel.app";
+const SITE_URL = "https://leaflogic.app";
 
 function main() {
   console.log("🗺️  Sitemap Generator starting...\n");

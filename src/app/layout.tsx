@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   description:
     "Expert tips and guides for keeping your indoor plants healthy and thriving. Care guides, troubleshooting, and more.",
-  metadataBase: new URL("https://leaflogic.vercel.app"),
+  metadataBase: new URL("https://leaflogic.app"),
   openGraph: {
     type: "website",
     siteName: "LeafLogic",
