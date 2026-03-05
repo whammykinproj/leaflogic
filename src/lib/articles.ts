@@ -9,6 +9,7 @@ export interface Article {
   category: string;
   date: string;
   keywords: string[];
+  faq?: { question: string; answer: string }[];
 }
 
 const CONTENT_DIR = path.join(process.cwd(), "content/articles");

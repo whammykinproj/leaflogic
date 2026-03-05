@@ -12,7 +12,10 @@ export default function Header() {
             Home
           </Link>
           <Link href="/articles" className="hover:text-green-primary transition-colors">
-            Plant Guides
+            Guides
+          </Link>
+          <Link href="/plants" className="hover:text-green-primary transition-colors">
+            Plants A-Z
           </Link>
           <Link href="/about" className="hover:text-green-primary transition-colors">
             About

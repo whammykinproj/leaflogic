@@ -57,12 +57,33 @@ export default async function ArticlePage({ params }: PageProps) {
     keywords: article.keywords.join(", "),
   };
 
+  const faqLd = article.faq?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: article.faq.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: f.answer,
+          },
+        })),
+      }
+    : null;
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {faqLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      )}
       <article className="mx-auto max-w-3xl px-6 py-16">
         <span className="text-xs font-semibold uppercase tracking-wide text-green-light">
           {article.category}
