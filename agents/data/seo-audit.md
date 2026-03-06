@@ -1,5 +1,5 @@
 # SEO Audit Report
-Date: 2026-03-05
+Date: 2026-03-06
 
 ## Alocasia Polly Care Guide: Grow a Thriving Plant
 Slug: alocasia-polly-care-guide-grow-a-thriving-plant
@@ -11,6 +11,19 @@ Slug: best-fertilizer-for-indoor-plants-a-complete-guide
 - [WARNING] Excerpt too long for meta description (180 chars, aim for <160)
 - [INFO] No images — consider adding visual content
 
+## Best Grow Lights for Indoor Plants in 2026
+Slug: best-grow-lights-for-indoor-plants-in-2026
+- [INFO] No images — consider adding visual content
+
+## Best Hanging Plants for Indoors: 15 Stunning Picks
+Slug: best-hanging-plants-for-indoors-15-stunning-picks
+- [ERROR] Primary keyword "best hanging plants indoors" not found in content
+- [INFO] No images — consider adding visual content
+
+## Best Indoor Plant Pots With Drainage (2026 Picks)
+Slug: best-indoor-plant-pots-with-drainage-2026-picks
+- [INFO] No images — consider adding visual content
+
 ## Best Low Light Houseplants for Beginners (2024 Guide)
 Slug: best-low-light-houseplants-for-beginners-2024-guide
 - [INFO] No images — consider adding visual content
@@ -18,6 +31,10 @@ Slug: best-low-light-houseplants-for-beginners-2024-guide
 ## Best Soil for Fiddle Leaf Fig: What Actually Works
 Slug: best-soil-for-fiddle-leaf-fig-what-actually-works
 - [WARNING] Excerpt too long for meta description (188 chars, aim for <160)
+- [INFO] No images — consider adding visual content
+
+## Best Soil for Indoor Plants in 2026: Top 5 Picks
+Slug: best-soil-for-indoor-plants-in-2026-top-5-picks
 - [INFO] No images — consider adding visual content
 
 ## Bird of Paradise Indoor Care: The Complete Growing Guide
@@ -53,6 +70,10 @@ Slug: english-ivy-indoor-care-tips-for-a-thriving-plant
 - [WARNING] Excerpt too long for meta description (182 chars, aim for <160)
 - [INFO] No images — consider adding visual content
 
+## Fiddle Leaf Fig Care Guide: Grow a Stunning Tree Indoors
+Slug: fiddle-leaf-fig-care-guide-grow-a-stunning-tree-indoors
+- [INFO] No images — consider adding visual content
+
 ## How Much Light Does a ZZ Plant Need to Thrive?
 Slug: how-much-light-does-a-zz-plant-need-to-thrive
 - [WARNING] Excerpt too long for meta description (184 chars, aim for <160)
@@ -61,8 +82,6 @@ Slug: how-much-light-does-a-zz-plant-need-to-thrive
 
 ## How Often Should You Water a Snake Plant? Complete Guide
 Slug: how-often-to-water-snake-plant
-- [ERROR] Content too thin (362 words, aim for 800+)
-- [ERROR] Primary keyword "snake plant watering" not found in content
 - [WARNING] Primary keyword not reflected in title
 - [INFO] No images — consider adding visual content
 
@@ -73,7 +92,11 @@ Slug: how-to-clean-houseplant-leaves-the-complete-guide
 
 ## How to Get Rid of Fungus Gnats for Good
 Slug: how-to-get-rid-of-fungus-gnats-for-good
-- [WARNING] No internal links — run the internal linker agent
+- [INFO] No images — consider adding visual content
+
+## How to Get Rid of Mealybugs on Houseplants for Good
+Slug: how-to-get-rid-of-mealybugs-on-houseplants-for-good
+- [WARNING] Excerpt too long for meta description (163 chars, aim for <160)
 - [INFO] No images — consider adding visual content
 
 ## How to Grow Pothos in Water with Roots Successfully
@@ -148,13 +171,36 @@ Slug: rubber-plant-care-guide-grow-a-thriving-ficus-elastica
 - [WARNING] Excerpt too long for meta description (197 chars, aim for <160)
 - [INFO] No images — consider adding visual content
 
+## Snake Plant Propagation: 4 Easy Methods That Work
+Slug: snake-plant-propagation-4-easy-methods-that-work
+- [WARNING] Excerpt too long for meta description (171 chars, aim for <160)
+- [INFO] No images — consider adding visual content
+
 ## Spider Plant Brown Tips: Causes, Fixes & Prevention
 Slug: spider-plant-brown-tips-causes-fixes-prevention
+- [INFO] No images — consider adding visual content
+
+## Spring Houseplant Care Checklist: 10 Things to Do Now
+Slug: spring-houseplant-care-checklist-10-things-to-do-now
+- [WARNING] Excerpt too long for meta description (175 chars, aim for <160)
+- [WARNING] Primary keyword not reflected in title
 - [INFO] No images — consider adding visual content
 
 ## String of Pearls Dying? Here's How to Save It
 Slug: string-of-pearls-dying-here-s-how-to-save-it
 - [WARNING] Excerpt too long for meta description (178 chars, aim for <160)
+- [INFO] No images — consider adding visual content
+
+## Summer Indoor Plant Care: How to Beat the Heat
+Slug: summer-indoor-plant-care-how-to-beat-the-heat
+- [WARNING] Excerpt too long for meta description (192 chars, aim for <160)
+- [WARNING] Primary keyword not reflected in title
+- [INFO] No images — consider adding visual content
+
+## Why Are My Plant Leaves Turning Yellow? 10 Common Causes
+Slug: why-are-my-plant-leaves-turning-yellow-10-common-causes
+- [ERROR] Primary keyword "yellow leaves houseplant" not found in content
+- [WARNING] Primary keyword not reflected in title
 - [INFO] No images — consider adding visual content
 
 ## Why Is Monstera Yellowing? Causes and Easy Fixes
@@ -215,7 +261,11 @@ Slug: why-is-my-monstera-turning-yellow-with-brown-spots
 
 ## Why Is My Pothos Turning Yellow? 7 Common Causes and Fixes
 Slug: why-is-my-pothos-turning-yellow
-- [ERROR] Content too thin (408 words, aim for 800+)
-- [ERROR] Primary keyword "pothos yellow leaves" not found in content
+- [WARNING] Primary keyword not reflected in title
+- [INFO] No images — consider adding visual content
+
+## Winter Houseplant Care Guide: Surviving the Cold Months
+Slug: winter-houseplant-care-guide-surviving-the-cold-months
+- [WARNING] Excerpt too long for meta description (192 chars, aim for <160)
 - [WARNING] Primary keyword not reflected in title
 - [INFO] No images — consider adding visual content
