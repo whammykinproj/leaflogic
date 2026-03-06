@@ -11,5 +11,67 @@
     "plant pots 2026",
     "ceramic plant pots",
     "self watering planters"
+  ],
+  "products": [
+    {
+      "name": "D'vine Dev Ceramic Planters",
+      "features": [
+        "Glazed ceramic with saucer",
+        "Modern muted tones",
+        "Multiple sizes available",
+        "Great for tropical plants"
+      ],
+      "priceRange": "$$",
+      "affiliateUrl": "https://www.amazon.com/s?k=Dvine+Dev+ceramic+planter+drainage&tag=leaflogic-20",
+      "rating": 5
+    },
+    {
+      "name": "Mkono Plastic Planters",
+      "features": [
+        "Lightweight and affordable",
+        "Removable drainage plug",
+        "Sold in multi-packs",
+        "Clean modern design"
+      ],
+      "priceRange": "$",
+      "affiliateUrl": "https://www.amazon.com/s?k=Mkono+plastic+planters+drainage&tag=leaflogic-20",
+      "rating": 4
+    },
+    {
+      "name": "Costa Farms Self-Watering Pots",
+      "features": [
+        "Built-in water reservoir",
+        "Prevents over and underwatering",
+        "Great for moisture-loving plants",
+        "Trusted brand"
+      ],
+      "priceRange": "$$",
+      "affiliateUrl": "https://www.amazon.com/s?k=Costa+Farms+self+watering+planter&tag=leaflogic-20",
+      "rating": 5
+    },
+    {
+      "name": "Fox & Fern Mid-Century Planter",
+      "features": [
+        "Ceramic pot with wood stand",
+        "Mid-century modern design",
+        "Drainage hole included",
+        "Statement piece"
+      ],
+      "priceRange": "$$$",
+      "affiliateUrl": "https://www.amazon.com/s?k=Fox+Fern+mid+century+plant+stand&tag=leaflogic-20",
+      "rating": 5
+    },
+    {
+      "name": "Terracotta Pots Set",
+      "features": [
+        "Porous clay for aeration",
+        "Matching saucers included",
+        "Multiple sizes in set",
+        "Classic timeless look"
+      ],
+      "priceRange": "$",
+      "affiliateUrl": "https://www.amazon.com/s?k=terracotta+pots+set+indoor+plants&tag=leaflogic-20",
+      "rating": 4
+    }
   ]
 }

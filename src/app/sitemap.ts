@@ -1,5 +1,6 @@
 import { getAllArticles } from "@/lib/articles";
 import { getAllPlantHubs } from "@/lib/plants";
+import { getAllTopicHubs } from "@/lib/guides";
 import type { MetadataRoute } from "next";
 
 const SITE_URL = "https://leaflogic.app";
@@ -7,6 +8,7 @@ const SITE_URL = "https://leaflogic.app";
 export default function sitemap(): MetadataRoute.Sitemap {
   const articles = getAllArticles();
   const plantHubs = getAllPlantHubs();
+  const topicHubs = getAllTopicHubs();
 
   const articleEntries = articles.map((article) => ({
     url: `${SITE_URL}/articles/${article.slug}`,
@@ -17,6 +19,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const plantEntries = plantHubs.map((hub) => ({
     url: `${SITE_URL}/plants/${hub.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.85,
+  }));
+
+  const guideEntries = topicHubs.map((hub) => ({
+    url: `${SITE_URL}/guides/${hub.slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.85,
@@ -41,6 +50,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: `${SITE_URL}/about`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${SITE_URL}/quiz`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/tools/watering-calculator`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    ...guideEntries,
     ...plantEntries,
     ...articleEntries,
   ];

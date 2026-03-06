@@ -36,6 +36,12 @@ export default function Footer() {
               <Link href="/about" className="hover:text-green-light transition-colors">
                 About
               </Link>
+              <Link href="/quiz" className="hover:text-green-light transition-colors">
+                Plant Quiz
+              </Link>
+              <Link href="/tools/watering-calculator" className="hover:text-green-light transition-colors">
+                Watering Calculator
+              </Link>
             </nav>
           </div>
 

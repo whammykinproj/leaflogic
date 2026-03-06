@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import AdSlot from "@/components/AdSlot";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import ScrollToTop from "@/components/ScrollToTop";
+import ProductComparisonTable from "@/components/ProductComparisonTable";
 import Link from "next/link";
 
 interface PageProps {
@@ -28,6 +29,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "article",
       publishedTime: article.date,
       url: `https://leaflogic.app/articles/${article.slug}`,
+    },
+    alternates: {
+      canonical: `https://leaflogic.app/articles/${article.slug}`,
     },
   };
 }
@@ -139,6 +143,11 @@ export default async function ArticlePage({ params }: PageProps) {
         </div>
 
         <AdSlot slot="top-article" format="horizontal" />
+
+        {/* Product comparison table */}
+        {article.products && article.products.length > 0 && (
+          <ProductComparisonTable products={article.products} />
+        )}
 
         {/* Article content */}
         <div

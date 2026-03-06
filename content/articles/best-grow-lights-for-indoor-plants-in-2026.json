@@ -11,5 +11,67 @@
     "LED grow light reviews",
     "grow lights for houseplants",
     "best grow lights for beginners"
+  ],
+  "products": [
+    {
+      "name": "GE Grow Light LED",
+      "features": [
+        "Full-spectrum light",
+        "Fits standard fixtures",
+        "Runs cool and efficient",
+        "Perfect for beginners"
+      ],
+      "priceRange": "$",
+      "affiliateUrl": "https://www.amazon.com/s?k=GE+grow+light+LED+indoor+plants&tag=leaflogic-20",
+      "rating": 4
+    },
+    {
+      "name": "Barrina T5 Grow Lights",
+      "features": [
+        "Linkable daisy-chain design",
+        "Great for shelving setups",
+        "Full-spectrum output",
+        "Multi-pack value"
+      ],
+      "priceRange": "$$",
+      "affiliateUrl": "https://www.amazon.com/s?k=Barrina+T5+grow+lights&tag=leaflogic-20",
+      "rating": 4
+    },
+    {
+      "name": "Spider Farmer SF1000",
+      "features": [
+        "Samsung LM301B diodes",
+        "Dimmable intensity",
+        "2x2 to 3x3 ft coverage",
+        "Professional-grade performance"
+      ],
+      "priceRange": "$$$",
+      "affiliateUrl": "https://www.amazon.com/s?k=Spider+Farmer+SF1000+LED&tag=leaflogic-20",
+      "rating": 5
+    },
+    {
+      "name": "Soltech Solutions Aspect",
+      "features": [
+        "Stylish pendant design",
+        "Warm full-spectrum light",
+        "Blends with home decor",
+        "Great for living spaces"
+      ],
+      "priceRange": "$$$",
+      "affiliateUrl": "https://www.amazon.com/s?k=Soltech+Solutions+Aspect+grow+light&tag=leaflogic-20",
+      "rating": 4
+    },
+    {
+      "name": "GooingTop LED Grow Light",
+      "features": [
+        "Clip-on gooseneck design",
+        "Built-in timer",
+        "Multiple brightness levels",
+        "Compact for small spaces"
+      ],
+      "priceRange": "$",
+      "affiliateUrl": "https://www.amazon.com/s?k=GooingTop+LED+grow+light+clip&tag=leaflogic-20",
+      "rating": 4
+    }
   ]
 }

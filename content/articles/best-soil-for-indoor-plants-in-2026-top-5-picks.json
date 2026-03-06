@@ -11,5 +11,67 @@
     "houseplant soil",
     "potting soil reviews",
     "organic potting mix for houseplants"
+  ],
+  "products": [
+    {
+      "name": "Fox Farm Ocean Forest",
+      "features": [
+        "Nutrient-rich organic blend",
+        "pH adjusted 6.3-6.8",
+        "Excellent drainage",
+        "Great for tropical plants"
+      ],
+      "priceRange": "$$",
+      "affiliateUrl": "https://www.amazon.com/s?k=Fox+Farm+Ocean+Forest+potting+soil&tag=leaflogic-20",
+      "rating": 5
+    },
+    {
+      "name": "Miracle-Gro Indoor Potting Mix",
+      "features": [
+        "6-month slow-release fertilizer",
+        "Fungus gnat resistant formula",
+        "Budget-friendly",
+        "Widely available"
+      ],
+      "priceRange": "$",
+      "affiliateUrl": "https://www.amazon.com/s?k=Miracle+Gro+indoor+potting+mix&tag=leaflogic-20",
+      "rating": 4
+    },
+    {
+      "name": "Espoma Organic Potting Mix",
+      "features": [
+        "OMRI-certified organic",
+        "Mycorrhizae for root health",
+        "Chemical-free",
+        "Great for herbs"
+      ],
+      "priceRange": "$$",
+      "affiliateUrl": "https://www.amazon.com/s?k=Espoma+organic+potting+mix&tag=leaflogic-20",
+      "rating": 4
+    },
+    {
+      "name": "Black Gold All Purpose",
+      "features": [
+        "Versatile for all plant types",
+        "Chunky texture for aeration",
+        "Great value",
+        "Canadian peat moss blend"
+      ],
+      "priceRange": "$",
+      "affiliateUrl": "https://www.amazon.com/s?k=Black+Gold+all+purpose+potting+soil&tag=leaflogic-20",
+      "rating": 4
+    },
+    {
+      "name": "Noot Organic Indoor Plant Soil",
+      "features": [
+        "Low-dust and clean",
+        "Biochar for soil health",
+        "OMRI-listed organic",
+        "Ideal for aroids and orchids"
+      ],
+      "priceRange": "$$$",
+      "affiliateUrl": "https://www.amazon.com/s?k=Noot+organic+indoor+plant+soil&tag=leaflogic-20",
+      "rating": 5
+    }
   ]
 }

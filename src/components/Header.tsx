@@ -24,6 +24,8 @@ export default function Header() {
             { href: "/", label: "Home" },
             { href: "/articles", label: "Guides" },
             { href: "/plants", label: "Plants A-Z" },
+            { href: "/quiz", label: "Plant Quiz" },
+            { href: "/tools/watering-calculator", label: "Tools" },
             { href: "/about", label: "About" },
           ].map((link) => (
             <Link
@@ -61,6 +63,8 @@ export default function Header() {
             { href: "/", label: "Home" },
             { href: "/articles", label: "Guides" },
             { href: "/plants", label: "Plants A-Z" },
+            { href: "/quiz", label: "Plant Quiz" },
+            { href: "/tools/watering-calculator", label: "Tools" },
             { href: "/about", label: "About" },
           ].map((link) => (
             <Link

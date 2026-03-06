@@ -1,6 +1,14 @@
 import fs from "fs";
 import path from "path";
 
+export interface ProductData {
+  name: string;
+  features: string[];
+  priceRange: string;
+  affiliateUrl: string;
+  rating: number;
+}
+
 export interface Article {
   slug: string;
   title: string;
@@ -10,6 +18,7 @@ export interface Article {
   date: string;
   keywords: string[];
   faq?: { question: string; answer: string }[];
+  products?: ProductData[];
   wordCount: number;
 }
 
