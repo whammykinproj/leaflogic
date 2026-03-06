@@ -5,6 +5,7 @@ import AdSlot from "@/components/AdSlot";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import ScrollToTop from "@/components/ScrollToTop";
 import ProductComparisonTable from "@/components/ProductComparisonTable";
+import ShareButtons from "@/components/ShareButtons";
 import Link from "next/link";
 
 interface PageProps {
@@ -30,8 +31,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       publishedTime: article.date,
       url: `https://leaflogic.app/articles/${article.slug}`,
     },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt,
+    },
     alternates: {
       canonical: `https://leaflogic.app/articles/${article.slug}`,
+    },
+    other: {
+      "pinterest:description": article.excerpt,
     },
   };
 }
@@ -140,6 +149,14 @@ export default async function ArticlePage({ params }: PageProps) {
             <span>LeafLogic Team</span>
           </div>
           <div className="mt-6 h-px bg-border" />
+
+          <div className="mt-4">
+            <ShareButtons
+              url={`https://leaflogic.app/articles/${article.slug}`}
+              title={article.title}
+              excerpt={article.excerpt}
+            />
+          </div>
         </div>
 
         <AdSlot slot="top-article" format="horizontal" />
@@ -160,6 +177,16 @@ export default async function ArticlePage({ params }: PageProps) {
         {/* Newsletter CTA */}
         <div className="mt-14">
           <NewsletterSignup />
+        </div>
+
+        {/* Bottom share bar */}
+        <div className="mt-10 flex flex-col items-center gap-2 border-t border-border pt-8">
+          <p className="text-sm font-medium text-foreground/50">Enjoyed this article? Share it!</p>
+          <ShareButtons
+            url={`https://leaflogic.app/articles/${article.slug}`}
+            title={article.title}
+            excerpt={article.excerpt}
+          />
         </div>
       </article>
 

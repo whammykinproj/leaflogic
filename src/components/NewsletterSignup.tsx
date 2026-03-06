@@ -5,11 +5,34 @@ import { useState } from "react";
 export default function NewsletterSignup() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Connect to Beehiiv, ConvertKit, or Mailchimp API
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.error || "Something went wrong. Please try again.");
+        return;
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -58,11 +81,15 @@ export default function NewsletterSignup() {
         />
         <button
           type="submit"
-          className="rounded-xl bg-green-primary px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-green-dark hover:shadow-md"
+          disabled={loading}
+          className="rounded-xl bg-green-primary px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-green-dark hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Subscribe
+          {loading ? "Subscribing..." : "Subscribe"}
         </button>
       </form>
+      {error && (
+        <p className="mt-3 text-sm text-red-600">{error}</p>
+      )}
     </div>
   );
 }
