@@ -6,6 +6,13 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        disallow: [
+          "/scout/dashboard",
+          "/scout/admin",
+          "/scout/api",
+          "/scout/onboarding",
+          "/scout/settings",
+        ],
       },
     ],
     sitemap: "https://leaflogic.app/sitemap.xml",

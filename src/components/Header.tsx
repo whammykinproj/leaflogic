@@ -2,9 +2,14 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Hide on scout routes — scout has its own chrome
+  if (pathname.startsWith("/scout")) return null;
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-cream/80 backdrop-blur-md">

@@ -1,6 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  // Hide on scout routes — scout has its own footer
+  if (pathname.startsWith("/scout")) return null;
+
   return (
     <footer className="border-t border-border bg-green-dark text-white/60">
       <div className="mx-auto max-w-5xl px-6 py-12">

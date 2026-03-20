@@ -3,6 +3,22 @@
     {
       "path": "/api/cron/job-scout",
       "schedule": "0 14 */3 * *"
+    },
+    {
+      "path": "/scout/api/cron",
+      "schedule": "0 14 * * *"
+    },
+    {
+      "path": "/scout/api/cron/trial-reminder",
+      "schedule": "0 15 * * *"
+    },
+    {
+      "path": "/scout/api/cron/re-engage",
+      "schedule": "0 15 * * 1"
+    },
+    {
+      "path": "/scout/api/cron/weekly-summary",
+      "schedule": "0 16 * * 5"
     }
   ]
 }

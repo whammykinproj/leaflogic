@@ -1,6 +1,7 @@
 import { getAllArticles } from "@/lib/articles";
 import { getAllPlantHubs } from "@/lib/plants";
 import { getAllTopicHubs } from "@/lib/guides";
+import { getAllPosts } from "@/app/scout/blog/posts";
 import type { MetadataRoute } from "next";
 
 const SITE_URL = "https://leaflogic.app";
@@ -9,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const articles = getAllArticles();
   const plantHubs = getAllPlantHubs();
   const topicHubs = getAllTopicHubs();
+  const blogPosts = getAllPosts();
 
   const articleEntries = articles.map((article) => ({
     url: `${SITE_URL}/articles/${article.slug}`,
@@ -71,5 +73,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...guideEntries,
     ...plantEntries,
     ...articleEntries,
+
+    // Scout (JobScout AI) pages
+    {
+      url: `${SITE_URL}/scout`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/scout/login`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${SITE_URL}/scout/privacy`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.3,
+    },
+    {
+      url: `${SITE_URL}/scout/terms`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.3,
+    },
+    {
+      url: `${SITE_URL}/scout/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    ...blogPosts.map((post) => ({
+      url: `${SITE_URL}/scout/blog/${post.slug}`,
+      lastModified: new Date(post.publishedAt),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
   ];
 }
