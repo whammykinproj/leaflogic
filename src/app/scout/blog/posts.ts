@@ -61,7 +61,7 @@ export const blogPosts: BlogPost[] = [
 
 <div style="margin-top: 2rem; padding: 1.5rem; border: 1px solid rgba(52, 211, 153, 0.3); border-radius: 0.75rem; background: rgba(52, 211, 153, 0.05);">
 <p style="font-weight: 600; color: rgb(52, 211, 153); margin-bottom: 0.5rem;">Ready to try a smarter job search?</p>
-<p style="color: rgb(161, 161, 170);">JobScout AI scans 6+ job boards daily and delivers matched roles with personalized pitches to your inbox every morning. <a href="/scout/login?signup=true" style="color: rgb(52, 211, 153); text-decoration: underline;">Start your free 7-day trial.</a></p>
+<p style="color: rgb(161, 161, 170);">JobScout AI scans 11+ job boards daily and delivers matched roles with personalized pitches to your inbox every morning. <a href="/scout/login?signup=true" style="color: rgb(52, 211, 153); text-decoration: underline;">Start your free 7-day trial.</a></p>
 </div>
 `,
   },
@@ -213,7 +213,7 @@ export const blogPosts: BlogPost[] = [
 
 <div style="margin-top: 2rem; padding: 1.5rem; border: 1px solid rgba(52, 211, 153, 0.3); border-radius: 0.75rem; background: rgba(52, 211, 153, 0.05);">
 <p style="font-weight: 600; color: rgb(52, 211, 153); margin-bottom: 0.5rem;">Ready to start looking? Let AI handle the hard part.</p>
-<p style="color: rgb(161, 161, 170);">JobScout AI scans 6+ job boards every morning, matches roles to your profile, and drafts personalized pitches — delivered to your inbox before coffee. No scrolling. No busywork. <a href="/scout/login?signup=true" style="color: rgb(52, 211, 153); text-decoration: underline;">Start your free 7-day trial.</a></p>
+<p style="color: rgb(161, 161, 170);">JobScout AI scans 11+ job boards every morning, matches roles to your profile, and drafts personalized pitches — delivered to your inbox before coffee. No scrolling. No busywork. <a href="/scout/login?signup=true" style="color: rgb(52, 211, 153); text-decoration: underline;">Start your free 7-day trial.</a></p>
 </div>
 `,
   },

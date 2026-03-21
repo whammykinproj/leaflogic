@@ -82,7 +82,7 @@ export async function POST(request: NextRequest) {
             </p>
 
             <ul style="color: #555; font-size: 14px; line-height: 1.9;">
-              <li>Scans 6+ job boards daily while you sleep</li>
+              <li>Scans 11+ job boards daily while you sleep</li>
               <li>Matches roles to your exact background and preferences</li>
               <li>Drafts personalized pitches for every match</li>
               <li>Delivers everything to your inbox each morning</li>

@@ -260,7 +260,7 @@ export default function JobSearchChecklistPage() {
             Let AI handle the boring parts
           </h3>
           <p className="text-zinc-400 text-sm mb-6 max-w-md mx-auto">
-            JobScout AI scans 6+ job boards daily, matches roles to your profile, and drafts personalized pitches — all delivered to your inbox.
+            JobScout AI scans 11+ job boards daily, matches roles to your profile, and drafts personalized pitches — all delivered to your inbox.
           </p>
           <Link
             href="/scout/login?signup=true"

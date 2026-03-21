@@ -44,7 +44,7 @@ export default function ScoutLanding() {
             <span className="text-emerald-400">While you sleep.</span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-            JobScout AI scans 6+ job boards daily, matches roles to your exact
+            JobScout AI scans 11+ job boards daily, matches roles to your exact
             profile, and drafts personalized pitches — all delivered to your inbox
             before your morning coffee.
           </p>
@@ -151,7 +151,7 @@ export default function ScoutLanding() {
         <div className="grid sm:grid-cols-2 gap-4">
           {[
             "Daily AI-curated job digest",
-            "6+ job board sources scanned",
+            "11+ job board sources scanned",
             "Personalized pitch drafts per match",
             "Resume variant recommendations",
             "Target company cold-email suggestions",
@@ -240,7 +240,7 @@ export default function ScoutLanding() {
           {[
             {
               q: "How does JobScout AI find jobs?",
-              a: "Every morning, our AI scans 6+ job boards — including Wellfound, YC Work at a Startup, Built In, LinkedIn, and more — then cross-references listings with your resume, target roles, and location preferences to surface only the most relevant matches.",
+              a: "Every morning, our AI scans 11+ job boards — including Wellfound, YC Work at a Startup, Built In, LinkedIn, and more — then cross-references listings with your resume, target roles, and location preferences to surface only the most relevant matches.",
             },
             {
               q: "What job boards do you scan?",
