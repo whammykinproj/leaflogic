@@ -12,9 +12,12 @@ const PUBLIC_ROUTES = ["/scout", "/scout/privacy", "/scout/terms"];
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Only handle /scout routes
+  // For non-scout routes, just forward the pathname header so server
+  // components (e.g. FooterWrapper) can read the current path.
   if (!pathname.startsWith("/scout")) {
-    return NextResponse.next();
+    const res = NextResponse.next();
+    res.headers.set("x-pathname", pathname);
+    return res;
   }
 
   // Skip auth for API routes, public pages, and static assets
@@ -22,7 +25,9 @@ export async function middleware(request: NextRequest) {
     pathname.startsWith("/scout/api/") ||
     PUBLIC_ROUTES.includes(pathname)
   ) {
-    return NextResponse.next();
+    const res = NextResponse.next();
+    res.headers.set("x-pathname", pathname);
+    return res;
   }
 
   // Gracefully handle missing Supabase config (pre-setup)
@@ -77,9 +82,10 @@ export async function middleware(request: NextRequest) {
     }
   }
 
+  response.headers.set("x-pathname", pathname);
   return response;
 }
 
 export const config = {
-  matcher: ["/scout/:path*"],
+  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
 };

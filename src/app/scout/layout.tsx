@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ToastProvider } from "@/lib/scout/toast";
+import FeedbackWidget from "@/components/scout/FeedbackWidget";
 
 export const metadata: Metadata = {
   title: {
@@ -34,7 +35,10 @@ export default function ScoutLayout({
 }) {
   return (
     <div className="min-h-screen bg-zinc-950 text-white scout-transitions">
-      <ToastProvider>{children}</ToastProvider>
+      <ToastProvider>
+        {children}
+        <FeedbackWidget />
+      </ToastProvider>
     </div>
   );
 }

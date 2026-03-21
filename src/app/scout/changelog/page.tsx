@@ -57,9 +57,9 @@ export default function ChangelogPage() {
                 {release.tag}
               </span>
             </div>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {release.items.map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm">
+                <li key={i} className="flex items-start gap-3 text-sm leading-relaxed">
                   <svg
                     className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0"
                     fill="none"

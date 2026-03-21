@@ -43,7 +43,7 @@ export default function ScoutLanding() {
             <br />
             <span className="text-emerald-400">While you sleep.</span>
           </h1>
-          <p className="text-lg text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto mb-10 leading-relaxed">
             JobScout AI scans 6+ job boards daily, matches roles to your exact
             profile, and drafts personalized pitches — all delivered to your inbox
             before your morning coffee.
