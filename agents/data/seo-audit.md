@@ -1,5 +1,5 @@
 # SEO Audit Report
-Date: 2026-03-21
+Date: 2026-03-22
 
 ## Alocasia Polly Care Guide: Grow a Thriving Plant
 Slug: alocasia-polly-care-guide-grow-a-thriving-plant
