@@ -8,7 +8,12 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  let body: { company: string; context?: string };
+  let body: {
+    company: string;
+    role: string;
+    industry?: string;
+    focusAreas?: string[];
+  };
   try {
     body = await request.json();
   } catch {
@@ -16,52 +21,107 @@ export async function POST(request: NextRequest) {
   }
 
   if (!body.company || body.company.length < 2) {
-    return NextResponse.json({ error: "Company name required" }, { status: 400 });
+    return NextResponse.json(
+      { error: "Company name required" },
+      { status: 400 }
+    );
   }
+  if (!body.role || body.role.length < 2) {
+    return NextResponse.json(
+      { error: "Role title required" },
+      { status: 400 }
+    );
+  }
+
+  const focusNote =
+    body.focusAreas && body.focusAreas.length > 0
+      ? `\n\nThe candidate is ESPECIALLY interested in these areas (give extra depth here): ${body.focusAreas.join(", ")}`
+      : "";
+
+  const industryNote = body.industry
+    ? `\nINDUSTRY: ${body.industry}`
+    : "";
 
   const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
   const response = await anthropic.messages.create({
     model: "claude-sonnet-4-20250514",
-    max_tokens: 3000,
+    max_tokens: 4000,
     messages: [
       {
         role: "user",
-        content: `You are a company research analyst helping a job seeker prepare for applications and interviews. Research this company and provide a comprehensive brief.
+        content: `You are an elite company research analyst preparing an intelligence brief for a job seeker. This is the kind of deep research a top recruiter would do before sending a candidate to interview.
 
 COMPANY: ${body.company}
-${body.context ? `ADDITIONAL CONTEXT: ${body.context}` : ""}
+ROLE: ${body.role}${industryNote}${focusNote}
 
-Provide the following as clean HTML (no markdown). Be specific and actionable:
+Generate a comprehensive Company Intelligence Brief as clean HTML (no markdown, no code fences, no \`\`\`). Each section should be wrapped in a <div class="section-card"> for visual separation.
 
-<h2>Company Overview</h2>
-<p>What the company does, founding year (if known), HQ location, size estimate, stage (startup/growth/enterprise). 2-3 sentences max.</p>
+Include ALL 8 sections below:
 
-<h2>Mission & Culture</h2>
-<p>What drives this company? What's their mission? What's the culture like based on public signals (Glassdoor themes, LinkedIn presence, engineering blog, etc.)? What type of person thrives here?</p>
+<h2>1. Company Snapshot</h2>
+<div class="section-card">
+One paragraph: what the company does, founding year, HQ, employee count estimate, funding stage/revenue estimate, key investors. Be specific with numbers where possible.
+</div>
 
-<h2>Recent News & Momentum</h2>
-<p>Any recent funding rounds, product launches, partnerships, or press coverage? What direction is the company heading? If you don't have recent data, say so honestly and suggest where to look.</p>
+<h2>2. Culture & Values</h2>
+<div class="section-card">
+What employees say about working there (Glassdoor themes). Work-life balance reality. Remote/hybrid/in-office policy. What type of person thrives here vs. who would struggle. Engineering culture vs. business culture balance.
+</div>
 
-<h2>Key People to Know</h2>
-<p>CEO, CTO, notable leaders. For each, a one-liner on their background. This helps the candidate reference leaders in cover letters or interviews.</p>
+<h2>3. Recent News & Momentum</h2>
+<div class="section-card">
+Last 6-12 months of notable events: funding rounds, product launches, partnerships, leadership changes, layoffs, acquisitions. What direction is the company heading? If you don't have recent data, say so honestly and name specific sources to check (TechCrunch, Crunchbase, etc.).
+</div>
 
-<h2>Interview Intelligence</h2>
-<p>Based on publicly available information:
-- What interview format do they likely use? (Behavioral, case study, technical, etc.)
-- What values do they screen for?
-- Common Glassdoor interview themes?</p>
+<h2>4. Interview Intelligence</h2>
+<div class="section-card">
+For the role of ${body.role}:
+- Interview process stages (how many rounds, types)
+- Common question themes from Glassdoor/Levels.fyi
+- Values they screen for
+- Technical vs. behavioral split
+- Timeline (how long from first screen to offer)
+- Tips from people who've been through it
+</div>
 
-<h2>Talking Points for Your Application</h2>
-<p>3-4 specific things the candidate could mention in a cover letter or interview that would show genuine knowledge of this company. Be specific — reference real products, initiatives, or values.</p>
+<h2>5. Compensation Intel</h2>
+<div class="section-card">
+For ${body.role} at this company:
+- Estimated salary range (base)
+- Equity/RSU expectations
+- Bonus structure
+- Notable benefits or perks
+- How comp compares to market (above/at/below)
+Source your estimates (Levels.fyi, Glassdoor, Blind, etc.)
+</div>
 
-<h2>Red Flags to Watch For</h2>
-<p>Any publicly known concerns? Glassdoor trends? Layoff history? High turnover signals? Be honest — this helps the candidate make informed decisions.</p>
+<h2>6. Red Flags & Concerns</h2>
+<div class="section-card">
+Be honest and direct:
+- Any layoff history? When and how many?
+- Glassdoor complaint patterns (management, WLB, growth)
+- Turnover signals (lots of recent job postings for same role?)
+- Burn rate concerns (if startup)
+- Any controversies or legal issues?
+If there are genuinely no red flags, say so — don't fabricate concerns.
+</div>
 
-<h2>Verdict</h2>
-<p>One paragraph: is this company worth pursuing? What type of candidate would be the best fit?</p>
+<h2>7. Your Angle — Talking Points</h2>
+<div class="section-card">
+3-5 SPECIFIC talking points the candidate should use in their cover letter or interview for the ${body.role} role. Reference real products, initiatives, technologies, or values. These should demonstrate genuine knowledge of the company, not generic statements.
+</div>
 
-Be honest, specific, and helpful. If you don't know something, say "Not available — check [specific source]" rather than making it up.`,
+<h2>8. Key People to Research</h2>
+<div class="section-card">
+- CEO/Founder: name + one-line background
+- CTO/VP Eng: name + one-line background
+- Likely hiring manager (title and team)
+- 2-3 team leads or notable employees to look up on LinkedIn
+For each person, suggest one thing the candidate could reference in conversation.
+</div>
+
+Be honest, specific, and actionable. If you don't know something, say "Not available — check [specific source]" rather than making it up. This is an intelligence brief, not a marketing brochure.`,
       },
     ],
   });
