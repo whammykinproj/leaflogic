@@ -1,12 +1,17 @@
 import { NextResponse } from "next/server";
 import { getUser, getScoutUser } from "@/lib/scout/supabase-server";
 import { createClient } from "@/lib/scout/supabase-server";
+import { isDemoMode } from "@/lib/scout/demo";
 import {
   createCheckoutSession,
   getOrCreateCustomer,
 } from "@/lib/scout/stripe";
 
 export async function POST() {
+  if (isDemoMode()) {
+    return NextResponse.json({ error: "Billing is not configured in demo mode." }, { status: 400 });
+  }
+
   const user = await getUser();
   if (!user) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

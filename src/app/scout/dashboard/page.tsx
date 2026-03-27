@@ -1,36 +1,41 @@
 import { redirect } from "next/navigation";
-import { getUser } from "@/lib/scout/supabase-server";
+import { getUser, getScoutUser, getScoutProfile } from "@/lib/scout/supabase-server";
 import { createClient } from "@/lib/scout/supabase-server";
+import { isDemoMode, DEMO_SCOUT_USER, DEMO_PROFILE, DEMO_DIGESTS } from "@/lib/scout/demo";
 import DashboardClient from "./DashboardClient";
 
 export default async function DashboardPage() {
   const user = await getUser();
   if (!user) redirect("/scout/login");
 
-  const supabase = await createClient();
+  const demo = isDemoMode();
 
-  const { data: scoutUser } = await supabase
-    .from("scout_users")
-    .select("*")
-    .eq("id", user.id)
-    .single();
+  // In demo mode, use mock data directly. No Supabase calls.
+  const scoutUser = demo ? { ...DEMO_SCOUT_USER } : await (async () => {
+    const supabase = await createClient();
+    const { data } = await supabase
+      .from("scout_users")
+      .select("*")
+      .eq("id", user.id)
+      .single();
+    return data;
+  })();
 
   if (!scoutUser) redirect("/scout/login");
 
-  const { data: profile } = await supabase
-    .from("scout_profiles")
-    .select("*")
-    .eq("user_id", user.id)
-    .single();
-
+  const profile = demo ? DEMO_PROFILE : await getScoutProfile(user.id);
   if (!profile) redirect("/scout/onboarding");
 
-  const { data: digests } = await supabase
-    .from("scout_digests")
-    .select("*")
-    .eq("user_id", user.id)
-    .order("sent_at", { ascending: false })
-    .limit(10);
+  const digests = demo ? DEMO_DIGESTS : await (async () => {
+    const supabase = await createClient();
+    const { data } = await supabase
+      .from("scout_digests")
+      .select("*")
+      .eq("user_id", user.id)
+      .order("sent_at", { ascending: false })
+      .limit(10);
+    return data;
+  })();
 
   // Calculate subscription gate
   let gate: "active" | "trialing" | "expired" = "expired";
@@ -55,36 +60,38 @@ export default async function DashboardPage() {
         )
       : 0;
 
-  // Update streak: track daily activity
-  const now = new Date();
-  const lastActive = scoutUser.last_active_at
-    ? new Date(scoutUser.last_active_at)
-    : null;
-  const isNewDay =
-    !lastActive ||
-    lastActive.toDateString() !== now.toDateString();
+  // Update streak (skip in demo mode)
+  if (!demo) {
+    const now = new Date();
+    const lastActive = scoutUser.last_active_at
+      ? new Date(scoutUser.last_active_at)
+      : null;
+    const isNewDay =
+      !lastActive ||
+      lastActive.toDateString() !== now.toDateString();
 
-  if (isNewDay) {
-    // Check if it's consecutive (last active was yesterday or today)
-    const yesterday = new Date(now);
-    yesterday.setDate(yesterday.getDate() - 1);
-    const isConsecutive =
-      lastActive && lastActive.toDateString() === yesterday.toDateString();
+    if (isNewDay) {
+      const yesterday = new Date(now);
+      yesterday.setDate(yesterday.getDate() - 1);
+      const isConsecutive =
+        lastActive && lastActive.toDateString() === yesterday.toDateString();
 
-    const newStreak = isConsecutive
-      ? (scoutUser.streak_days ?? 0) + 1
-      : 1;
+      const newStreak = isConsecutive
+        ? (scoutUser.streak_days ?? 0) + 1
+        : 1;
 
-    await supabase
-      .from("scout_users")
-      .update({
-        last_active_at: now.toISOString(),
-        streak_days: newStreak,
-      })
-      .eq("id", user.id);
+      const supabase = await createClient();
+      await supabase
+        .from("scout_users")
+        .update({
+          last_active_at: now.toISOString(),
+          streak_days: newStreak,
+        })
+        .eq("id", user.id);
 
-    scoutUser.streak_days = newStreak;
-    scoutUser.last_active_at = now.toISOString();
+      scoutUser.streak_days = newStreak;
+      scoutUser.last_active_at = now.toISOString();
+    }
   }
 
   return (
@@ -100,7 +107,7 @@ export default async function DashboardPage() {
         skills: profile.skills || [],
       }}
       digests={
-        digests?.map((d) => ({
+        digests?.map((d: { id: string; jobs_found: number; sent_at: string }) => ({
           id: d.id,
           jobsFound: d.jobs_found,
           sentAt: d.sent_at,

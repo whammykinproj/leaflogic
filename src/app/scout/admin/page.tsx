@@ -2,6 +2,19 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/scout/supabase-server";
 import { headers } from "next/headers";
 
+interface ScoutUser {
+  id: string;
+  email: string;
+  full_name: string | null;
+  subscription_status: string;
+  trial_ends_at: string | null;
+  stripe_customer_id: string | null;
+  last_active_at: string | null;
+  streak_days: number | null;
+  created_at: string;
+  updated_at: string;
+}
+
 // Simple admin dashboard — protected by a secret token in the URL
 // Access: /scout/admin?token=YOUR_ADMIN_TOKEN
 
@@ -38,24 +51,25 @@ export default async function AdminPage({
     .order("sent_at", { ascending: false });
 
   const digestCountMap = new Map<string, number>();
-  digestCounts?.forEach((d) => {
+  digestCounts?.forEach((d: { user_id: string; id: string }) => {
     digestCountMap.set(d.user_id, (digestCountMap.get(d.user_id) || 0) + 1);
   });
 
   // Stats
-  const totalUsers = users?.length || 0;
+  const typedUsers = (users || []) as ScoutUser[];
+  const totalUsers = typedUsers.length;
   const activeUsers =
-    users?.filter(
+    typedUsers.filter(
       (u) =>
         u.subscription_status === "active" ||
         (u.subscription_status === "trialing" &&
           u.trial_ends_at &&
           new Date(u.trial_ends_at) > new Date())
-    ).length || 0;
+    ).length;
   const payingUsers =
-    users?.filter((u) => u.subscription_status === "active").length || 0;
+    typedUsers.filter((u) => u.subscription_status === "active").length;
   const trialingUsers =
-    users?.filter((u) => u.subscription_status === "trialing").length || 0;
+    typedUsers.filter((u) => u.subscription_status === "trialing").length;
   const totalDigests = digestCounts?.length || 0;
   const mrr = payingUsers * 29;
 
@@ -153,7 +167,7 @@ export default async function AdminPage({
                 </tr>
               </thead>
               <tbody>
-                {users?.map((user) => {
+                {typedUsers.map((user) => {
                   const isExpired =
                     user.subscription_status === "trialing" &&
                     user.trial_ends_at &&

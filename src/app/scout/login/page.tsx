@@ -1,13 +1,22 @@
 "use client";
 
 import { createClient } from "@/lib/scout/supabase-client";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 
 function LoginForm() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const isSignup = searchParams.get("signup") === "true";
+
+  // In demo mode (no Supabase URL), skip login and go straight to dashboard
+  useEffect(() => {
+    const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    if (!url || url === "https://your-project.supabase.co" || url === "") {
+      router.replace("/scout/dashboard");
+    }
+  }, [router]);
 
   const handleGoogleLogin = async () => {
     const supabase = createClient();

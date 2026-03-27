@@ -1,10 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getUser, createClient } from "@/lib/scout/supabase-server";
+import { isDemoMode, DEMO_PROFILE } from "@/lib/scout/demo";
 
 export async function GET() {
   const user = await getUser();
   if (!user) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  if (isDemoMode()) {
+    return NextResponse.json({
+      digest_frequency: DEMO_PROFILE.digest_frequency,
+      email_notifications: DEMO_PROFILE.email_notifications,
+    });
   }
 
   const supabase = await createClient();
@@ -26,6 +34,10 @@ export async function GET() {
 }
 
 export async function PATCH(request: NextRequest) {
+  if (isDemoMode()) {
+    return NextResponse.json({ success: true });
+  }
+
   const user = await getUser();
   if (!user) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -87,6 +99,10 @@ export async function PATCH(request: NextRequest) {
 }
 
 export async function DELETE() {
+  if (isDemoMode()) {
+    return NextResponse.json({ success: true });
+  }
+
   const user = await getUser();
   if (!user) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
